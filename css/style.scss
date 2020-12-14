@@ -1,0 +1,734 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    outline: none;
+}
+ul{
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a:hover{
+    text-decoration: none;
+    
+  
+}
+header{
+    background: url(https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/home-3-slider-image-3-new.jpg);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position:center;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+
+    .navigation-menu{
+        color: black;
+        .nav-logo{
+            height: 67px;
+            a{
+                img{
+                    width:auto;
+                    height: 100%;
+                }
+            }
+        }
+        .menu{
+            z-index: 1;
+            ul{
+                .li{
+                    padding: 35px 23px;
+                    
+                    .a{
+                        position: relative;
+                        padding-bottom: 10px;
+                        font-size: 15px;
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-family: 'Marcellus', serif;
+                        &::after{
+                            content:'';
+                            position: absolute;
+                            width: 0;
+                            height: 2px;
+                            background-color: #fff;
+                            bottom: 0;
+                            left: 50%;
+                            border-radius: 10px;
+                            transition: .5s ease-in-out; 
+                        }
+                        &:hover::after{
+                            left: 0;
+                            width: 100%;
+                        }
+                        &.active-link::after{
+                            width: 100%;
+                            left: 0;
+                        }   
+                    }
+                }
+                .li{
+                    position: relative;
+                    &:hover{
+                        .drop-menu{
+                            max-height: 20em;
+                        }
+                    }
+                    .drop-menu{
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: .5s ease-in-out;
+                        ul{
+                            padding: 15px 0;
+                            .drop-li{
+                                width: 228px;
+                                text-align: right;
+                                a{
+                                    color: #fff;
+                                    opacity: 0.5;
+                                    right: 20px;
+                                    text-transform: uppercase;
+                                    font-size: 12px;
+                                    position: relative;
+                                    transition: .5s ease-in-out;
+                                    &:hover{
+                                        right: 40px;
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                        ul{
+                            padding: 15px 0;
+                            background-color: #1D1D1D;
+                            .hover-li{
+                                width: 228px;
+                                margin: 0;
+                                
+                                a{
+                                    padding: 6px 20px;
+                                    display: block;
+                                    color: #fff;
+                                    font-size: 12px;
+                                    opacity: 0.5;
+                                    text-transform: uppercase;
+                                    font-family: 'Marcellus', serif;
+                                    position: relative;
+                                    left: 0;
+                                    transition: .5s ease-in-out;
+                                    &:hover{
+                                        left: 20px;
+                                        opacity: 1;
+                                    }
+                                }
+                               
+                                }
+                                
+                        }
+    
+                    }
+                }
+            }
+            .nav-icon{
+                sup{
+                    color: #fff;
+                    font-size: 16px;
+                }
+                i{
+                    color: #fff;
+                    font-size: 18px;
+                    padding: 35px 0;
+                }
+                a{
+                    padding: 0 16px;
+                }
+            }
+        }
+    }
+    .head-text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        .img-br{
+            img{
+               padding: 10px 0 20px;
+               width: 20%;
+            }
+        }
+       h1{
+           color: #fff;
+           font-size: 68px;
+           font-family: 'Marcellus', serif;
+
+       }
+       p{
+           color: #fff;
+           font-size: 16px;
+           font-family: 'Marcellus', serif;
+       }
+       a{
+           color: #fff;
+           font-size: 14px;
+           font-weight: bold;
+           padding: 23px 50px;
+           border: 1px solid #fff;
+           font-family: 'Marcellus', serif;
+           transition: .5s ease-in-out;
+           &:hover{
+               background-color: #BE9C79;
+               border: 1px solid#BE9C79;
+           }
+       }
+    }
+    .side-menu{
+        background-color: #222;
+        position: fixed;
+        top: 0;
+        right: -500px;
+        height: 100%;
+        width: 450px;
+        padding: 60px 42px 30px 41px;
+        transition: .5s ease-in-out;
+        text-align: center;
+        z-index: 1;
+        .close-btn{
+            i{
+                display: flex;
+                justify-content: flex-end;
+                font-size: 25px;
+            }
+        }
+        &.active-side{
+            right: 0;
+        }
+        img{
+            margin: 0 0 20px;
+        }
+        p{
+            color: #fff;
+            font-size: 15px;
+            font-family: 'Marcellus', serif;
+            margin: 10px 0 20px;
+        }
+        .tel{
+            a{
+                color: #fff;
+                transition: .5s;
+                &:hover{
+                    color: #996428;
+                }
+            }  
+        }
+        .side-icon{
+            margin: 20px 0 20px;
+            span{
+                i{
+                    color: #fff;
+                    padding: 10px 10px;
+                    border-radius: 50%;
+                    background-color: #996428;
+                    margin: 0 5px;
+                    transition: .5s ease-in-out;
+                    &:hover{
+                        transform: rotate(360deg);
+                        background-color: #fff;
+                        color: #996428;
+                    }
+
+                }
+            }
+        }
+    }
+   
+}
+.fixed{
+   
+    .fix-shop{
+        bottom: 150px;
+        right: 0;
+        position: fixed;
+        padding: 10px 20px;
+        background-color: #EF2853;
+        a{
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: bold;
+            font-family: 'Marcellus', serif;
+            i{
+              
+               padding: 0 5px;
+                color: #fff;
+                font-size: 18px;
+
+            }
+        }
+        
+    }
+   
+        
+    .fix-bell{
+        bottom: 100px;
+        right: 0;
+        position: fixed;
+        padding: 10px 23px;
+        background-color: #fff;
+        a{
+            color: #222;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: bold;
+            font-family: 'Marcellus', serif;
+            i{
+               padding: 0 5px;
+               font-size: 18px;
+                color:#EF2853 ;
+               
+            }
+        }
+        
+    }
+   
+}
+.paper-section{
+    padding: 60px 0;
+    .text-item{
+        display: flex;
+        justify-content: flex-end;
+        .text{
+            text-align: right;
+            padding: 60px 0 0;
+            h5{
+                a{
+                    color: #262626;
+                    font-size: 20px;
+                    font-family: 'Marcellus', serif;
+                    text-transform: uppercase;
+                }
+            }
+            p{
+                color: #656565;
+                font-size: 15px;
+                font-family: 'Marcellus', serif;
+                margin: 1px 0 0 ;
+            }
+        }
+        .icon-text{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            img{
+                padding: 25px 0 0 15px;
+                align-items: center;
+            }
+        }
+        
+    }
+    .img-text{
+        width: 100%;
+        padding: 100px 0 0;
+        img{
+            width: 100%;
+        }
+    }
+   
+    .icon-text-1{
+        padding: 60px 0 0;
+        img{
+            align-items: center;
+            padding:  15px 15px 0 0;
+        }
+    }
+    .text-1{
+        padding: 60px 0 0;
+        h5{
+            a{
+                color: #262626;
+                font-size: 20px;
+                font-family: 'Marcellus', serif;
+                text-transform: uppercase;
+            }
+        }
+        p{
+            color: #656565;
+            font-size: 15px;
+            font-family: 'Marcellus', serif;
+            margin: 1px 0 0 ;
+        }
+    }
+}
+.coffee-section{
+    background: url(https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h3-img-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 220px 0;
+    position: relative;
+    z-index: -1;
+    .coffee{
+        position: absolute;
+        text-align: center;
+        top: 20%;
+        left: 10%;
+        h2{
+            color: #fff;
+            font-size: 55px;
+            text-transform: uppercase;
+            font-family: 'Marcellus', serif;
+        }
+        img{
+            margin: 13px 0 22px;
+        }
+        h6{
+            color:#fff;
+            font-size: 15px;
+            font-family: 'Marcellus', serif;
+            line-height: 1.5; 
+        }
+        a{
+                color: #fff;
+                font-size: 12px;
+                font-weight: bold;
+                font-family: 'Marcellus', serif;
+                padding: 20px 30px;
+                border: 2px solid #fff;
+                text-transform: uppercase;
+                transition: .5s ease-in-out;
+                &:hover{
+                    background-color: #fff;
+                    color: #222;
+                }
+
+        }
+
+    }
+
+}
+.blog-section{
+    text-align: center;
+    padding: 120px 0;
+    .blog{
+        text-align: center;
+        h2{
+            color: #262626;
+            font-size:55px;
+            text-transform: uppercase;
+            font-family: 'Marcellus', serif;
+        }
+        img{
+            margin: 13px 0 22px;
+        }
+        h6{
+            color: #262626;
+            font-size: 18px;
+            font-family: 'Marcellus', serif;
+            margin:20px 0 0;
+            line-height: 1.5;
+        }
+    }
+    .img-box{
+       
+        img{
+            width: 100%;
+        }
+    }
+    .text-box{
+        text-align: left;
+        h5{
+            color: #262626;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-family: 'Marcellus', serif;
+            padding: 20px 0 0;
+        }
+        p{
+            color: #656565;
+            font-size:15px;
+            font-family: 'Marcellus', serif;
+            margin: 8px 0 0 ;
+            padding: 20px 0;
+        }
+        a{
+            position: relative;
+            color: #222;
+            font-size:15px;
+            font-weight: bold;
+            left: 0;
+            text-transform: uppercase;
+            font-family: 'Marcellus', serif;
+            transition: .5s ease-in-out;
+           &:hover{
+               color:#BE9C79;
+               left: 20px;
+           }
+        }
+    }
+}
+.test-section{
+    background: url(https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/h3-img-3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 220px 0;
+    position: relative;
+    z-index: -1;
+    .test{
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        h2{
+            color: #fff;
+            font-size: 55px;
+            text-transform: uppercase;
+            font-family: 'Marcellus', serif;
+        }
+        img{
+            margin: 13px 0 22px;
+        }
+        p{
+            color: #fff;
+            font-size: 18px;
+            font-family: 'Marcellus', serif;
+            margin:20px 0 0;
+            line-height: 1.5;
+        }
+        .cafe{
+            span{
+                color: #fff;
+                font-size: 16px;
+                opacity: 0.7;
+            }
+        }
+
+    }
+}
+.our-section{
+    padding: 120px 0;
+    .our{
+        text-align: center;
+        h2{
+            color: #262626;
+            font-size:55px;
+            text-transform: uppercase;
+            font-family: 'Marcellus', serif;
+        }
+        img{
+            margin: 13px 0 22px;
+        }
+        h6{
+            color: #262626;
+            font-size: 18px;
+            font-family: 'Marcellus', serif;
+            margin:20px 0 0;
+            line-height: 1.5;
+        }
+    }
+    .ice{
+        display: flex;
+        img{
+            align-items: center;
+            display:flex;
+        }
+    }
+    .ice-item{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.images{
+      display: flex;
+      width: 100%;
+          .best-img{
+              position: relative;
+              z-index: -1;
+              .logo-img{
+                position: absolute;
+                top: 15%;
+                left: 30%;
+              }
+              .logo-text{
+                  position: absolute;
+                  
+                  top: 25%;
+                  left: 15%;
+                  h3{
+                      color: #fff;
+                      font-size: 35px;
+                      font-family: 'Marcellus', serif;
+                      text-align: center;
+                      margin-bottom:80px ;
+                  }
+                  .h6-text{
+                      display: flex;
+                    .h6{
+                        text-align: center;
+                        color: #fff;
+                        font-size: 18px;
+                        font-family: 'Marcellus', serif;
+                        margin: 20px 30px 35px;
+                        padding: 0 0 20px;
+                        a{
+                            color: #fff;
+                            transition: .5s ease-in-out;
+                            &:hover{
+                                color:  #996428;
+                            }
+                        }
+                    }
+                  }
+                  
+              }
+              img{
+                  width: 100%;
+              }
+          }
+      }
+  .shopname{
+      padding: 120px 0;
+      .brand{
+          padding:0 15px;
+          h3{
+              color: #262626;
+              font-size: 35px;
+              font-family: 'Marcellus', serif;
+              text-transform: uppercase;
+          }
+          p{
+              color: #262626;
+              font-size: 18px;
+              font-family: 'Marcellus', serif;
+              margin: 20px 0 0;
+          }
+          a{
+              color: #262626;
+              font-size: 12px;
+              font-weight: bold;
+              text-transform: uppercase;
+              font-family: 'Marcellus', serif;
+              border: 1px solid #262626;
+              padding: 19px 35px;
+              transition: .5s ease-in-out;
+              &:hover{
+                  background-color:  #996428;
+                  border: 1px solid  #996428;
+              }
+          }
+      }
+      .coffee-img{
+          padding: 0 15px;
+        .coffee-log{
+            img{
+                color: #656565;
+                font-size: 15px;
+                padding: 20px 20px;
+                transition: .5s ease-in-out;
+                opacity: 1;
+                &:hover{
+                    color: #996428;
+                    opacity: 0.7;
+                    transform: scale(0.9);
+                }
+            }
+            
+        }
+      }
+  }
+.box-section{
+    width: 100%;
+        display: flex;
+        .coffee-box{
+            position: relative;
+            z-index: -1;
+            a{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                color: white;
+                font-size: 25px;
+            }
+            .bg-color{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                color: #222;
+                opacity: 1;
+            }
+            img{
+                width: 100%;
+               
+            }
+        
+      
+    }
+    
+}
+.store-section{
+    background: url(https://corretto.qodeinteractive.com/wp-content/uploads/2018/04/footer-top-img-1.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    .store-img{
+        text-align: center;
+        padding: 76px 0;
+    }
+    .store-text{
+        text-align: center;
+        p{
+            color: #fff;
+            font-size: 15px;
+            font-family: 'Marcellus', serif;
+        }
+        .h5-1{
+            h5{
+                color: #fff;
+                font-size: 20px;
+                text-transform: uppercase;
+                font-family: 'Marcellus', serif;
+            }
+            p{
+                a{
+                    color: #fff;
+                    font-size: 15px;
+                    font-family: 'Marcellus', serif;
+                    transition: .5s;
+                    &:hover{
+                        color: #996428 ;
+                    }
+                }
+            }
+        }
+        .h5-2{
+            h5{
+                color: #fff;
+                font-size: 20px;
+                text-transform: uppercase;
+                font-family: 'Marcellus', serif;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
